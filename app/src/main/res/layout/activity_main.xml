@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/placeSnackbar"
+    android:background="@color/colorPrimaryLight"
+    android:orientation="vertical">
+
+
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <View
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorSpecialTransparent2"
+            android:visibility="gone"
+            android:fitsSystemWindows="true"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/coordinatorlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.design.widget.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/super_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:elevation="4dp"
+                        android:background="@color/colorPrimary"
+                        app:layout_scrollFlags="enterAlways|scroll|snap">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp">
+
+
+
+                            <TextView
+                                android:id="@+id/mesyAño_fecha_seleccionada"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="uuuuu 1987"
+                                android:textColor="@color/colorAzul"
+
+
+                                android:layout_alignParentTop="true"
+
+                                android:layout_centerHorizontal="true"
+                                android:textSize="19sp"
+                                android:fontFamily="sans-serif-condensed-medium"/>
+
+                            <ImageButton
+                                android:id="@+id/expand_calendar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/colorTransparente"
+                                android:src="@drawable/ic_expand_more_white_24dp"
+                                android:layout_marginTop="22dp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"/>
+
+                            <ImageButton
+                                android:id="@+id/button_filter_list"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_filter_list_white_24dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerHorizontal="true"
+                                android:visibility="visible"
+                                />
+
+
+                            <ImageButton
+                                android:id="@+id/mostrar_todas_tareas"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_filter_tilt_shift_white_24dp"
+                                android:background="@color/colorTransparente"
+                                android:layout_alignLeft="@id/button_open_slide_menu"
+                                android:layout_marginLeft="50dp"
+                                />
+
+                            <ImageButton
+                                android:id="@+id/button_open_slide_menu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:src="@drawable/ic_menu_white_24dp"
+                                android:layout_alignParentLeft="true"
+
+                                />
+
+
+                        </RelativeLayout>
+
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:id="@+id/horizontalCalendar_container"
+                            >
+
+                                <devs.mulham.horizontalcalendar.HorizontalCalendarView
+                                    android:id="@+id/horizontalCalendar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/colorPrimary"
+                                    app:selectorColor="@color/colorAzul"
+                                    app:textColorSelected="@color/colorAzul"
+                                    app:sizeMiddleText="14sp"
+                                    app:sizeBottomText="10sp"
+                                    app:sizeTopText="10sp"
+                                    android:layout_marginTop="5dp"
+                                    />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/fullCalendar_container"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <CalendarView
+                                android:id="@+id/fullCalendar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#E4E0E0"
+                                android:unfocusedMonthDateColor="#FFFFFF"
+
+                                android:weekNumberColor="#FFFFFF"
+                                android:weekSeparatorLineColor="#FFFFFF" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/Color_Filter_Container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_centerHorizontal="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/Filtro_Barra_Azul"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:buttonTint="@color/colorPrimary"
+                                android:checked="true"
+
+                                android:background="@drawable/ic_barra_azul"/>
+
+                            <CheckBox
+                                android:id="@+id/Filtro_Barra_Verde"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:buttonTint="@color/colorPrimary"
+                                android:checked="true"
+
+                                android:background="@drawable/ic_barra_verde"
+
+                                android:layout_marginLeft="8dp"/>
+                            <CheckBox
+                                android:id="@+id/Filtro_Barra_Naranja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:buttonTint="@color/colorPrimary"
+                                android:checked="true"
+
+                                android:background="@drawable/ic_barra_naranja"
+
+                                android:layout_marginLeft="8dp"/>
+                            <CheckBox
+                                android:id="@+id/Filtro_Barra_Roja"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:buttonTint="@color/colorPrimary"
+                                android:checked="true"
+
+                                android:background="@drawable/ic_barra_roja"
+                                android:layout_marginLeft="8dp"/>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </android.support.design.widget.AppBarLayout>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/LISTA_TAREAS"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_marginBottom="20dp"
+
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    />
+
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    style="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    android:background="@color/colorPrimary"
+
+                    />
+
+
+
+
+                <FrameLayout
+                    android:id="@+id/contenedor_filtros"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:background="@android:color/transparent"
+
+                    />
+
+
+
+                <!--<RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/LISTA_TAREAS"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_marginBottom="20dp"
+
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        />
+
+                </RelativeLayout>-->
+
+
+            </LinearLayout>
+
+            </android.support.design.widget.CoordinatorLayout>
+
+            <View
+                android:id="@+id/watch_snackbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorTransparente"
+                android:visibility="gone"/>
+
+            <View
+                android:id="@+id/back2"
+
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorSpecialTransparent"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/back3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorSpecialTransparent"
+                android:visibility="gone"
+                android:fitsSystemWindows="true"
+                />
+
+
+
+
+
+              <FrameLayout
+                  android:id="@+id/contenedor"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"/>
+
+
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@android:color/transparent"
+            android:elevation="6dp"
+
+            app:itemTextColor="@color/colorCardView"
+            app:itemIconTint="@color/colorCardView"
+            app:itemIconPadding="20dp"
+
+            app:itemBackground="@android:color/transparent"
+
+
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/navigation_menu">
+
+            <!-- margin bottom = 280   margin top = 270-->
+            <View
+                android:id="@+id/view_weird"
+                android:layout_width="4dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="270dp"
+                android:layout_marginBottom="330dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/nav_view_1"
+                android:layout_gravity="end"/>
+        </android.support.design.widget.NavigationView>
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+
+
+        android:onClick="NewTask"
+        app:backgroundTint="@color/colorRosa1"
+
+        app:elevation="3dp"
+
+        app:layout_anchor="@+id/drawer_layout"
+        app:layout_anchorGravity="bottom|center"
+        app:srcCompat="@drawable/ic_create_white_24dp" />
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

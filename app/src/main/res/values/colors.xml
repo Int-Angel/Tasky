@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="colorPrimary">#283142</color>
+    <color name="colorPrimaryDark">#23293A</color>
+    <color name="colorPrimaryLight">#2C3A4A</color>
+    <color name="colorAccent">@color/colorVerde</color>
+
+    <color name="colorRosa1">#ff3366</color>
+    <color name="colorRosa2">#CE275E</color>
+
+    <color name="colorCardView">#F5F1F0</color>
+    <color name="colorDarkerCardView">#23000000</color>
+    <color name="colorVerde">#00bb77</color>
+    <color name="colorRojo">#F53636</color>
+    <color name="colorNaranja">#E49225</color>
+    <color name="colorNaranja2">#FF8400</color>
+    <color name="colorAzul">#2196F3</color>
+    <color name="colorAzulClarines">#21D4F3</color>
+    <color name="colorAzulOscuro">#1674BE</color>
+    <color name="colorMorado">#8888ff</color>
+    <color name="colorNegro">#161616</color>
+    <color name="colorTotalNegro">#000000</color>
+
+    <color name="colorProgress1">#82F084</color>
+    <color name="colorProgress2">#8CDB33</color>
+
+    <color name="colorSpecialWhite">#C4F5F1F0</color>
+
+    <color name="colorSpecialTransparent">#90000000</color>
+    <color name="colorSpecialTransparent2">#BA000000</color>
+    <color name="colorTransparente">#00000000</color>
+
+    <color name="colorText2">#4E4E4E</color>
+</resources>

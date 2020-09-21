@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.angel.tasky"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="23"
+8-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.VIBRATE" />
+11-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:5:5-66
+11-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:5:22-63
+12    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+12-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:6:5-80
+12-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:6:22-77
+13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+13-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:7:22-78
+14    <uses-permission android:name="android.permission.CAMERA" />
+14-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:8:5-65
+14-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:8:22-62
+15
+16    <application
+16-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:10:5-38:19
+17        android:name="com.angel.tasky.App"
+17-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:11:9-28
+18        android:allowBackup="true"
+18-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:12:9-35
+19        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+19-->[com.android.support:support-compat:28.0.0] C:\Users\Propietario\.gradle\caches\transforms-2\files-2.1\b73d0db3c489aeab8b531c92b0313ef9\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+20        android:debuggable="true"
+21        android:icon="@mipmap/ic_launcher"
+21-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:13:9-43
+22        android:label="@string/app_name"
+22-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:14:9-41
+23        android:largeHeap="true"
+23-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:15:9-33
+24        android:roundIcon="@mipmap/ic_launcher_round"
+24-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:16:9-54
+25        android:supportsRtl="true"
+25-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:17:9-35
+26        android:theme="@style/AppTheme" >
+26-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:18:9-40
+27        <activity
+27-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:20:9-23:55
+28            android:name="com.angel.tasky.MainActivity"
+28-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:21:13-41
+29            android:screenOrientation="portrait"
+29-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:22:13-49
+30            android:windowSoftInputMode="adjustPan" />
+30-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:23:13-52
+31        <activity
+31-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:24:9-34:20
+32            android:name="com.angel.tasky.SplashScreenActivity"
+32-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:25:13-49
+33            android:screenOrientation="portrait"
+33-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:26:13-49
+34            android:theme="@style/SplashScreenTheme"
+34-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:27:13-53
+35            android:windowSoftInputMode="adjustPan" >
+35-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:28:13-52
+36            <intent-filter>
+36-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:29:13-33:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:30:17-69
+37-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:30:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:32:17-77
+39-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:32:27-74
+40            </intent-filter>
+41        </activity>
+42
+43        <receiver android:name="com.angel.tasky.AlertReceiber" />
+43-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:36:9-50
+43-->C:\Angel\TASK_2_v2\app\src\main\AndroidManifest.xml:36:19-48
+44    </application>
+45
+46</manifest>

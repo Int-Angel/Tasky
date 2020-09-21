@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:id="@+id/obj_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp">
+
+
+
+        <CheckBox
+            android:id="@+id/checked_obj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_checkbox_1"
+            android:layout_marginLeft="9dp"
+
+            android:text="Matematicas  "
+            android:textColor="@color/cardview_light_background"
+            android:textSize="13sp"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:id="@+id/obj_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="10"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="12dp"
+            android:fontFamily="sans-serif-condensed"
+
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="5dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

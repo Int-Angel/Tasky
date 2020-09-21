@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    tools:context=".NewTaskFragment">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_new_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="26dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/new_task_cortina"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorVerde"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/texto_mensaje_final"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guardado!"
+                    android:textColor="@color/cardview_light_background"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    android:background="@android:color/transparent"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:elevation="10dp"
+                    />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_new_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbar_cardview_rounded">
+
+                <ImageButton
+                    android:id="@+id/button_back_new_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:background="@android:color/transparent"/>
+
+            </android.support.v7.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+
+
+                        <!--Fechas -->
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Fechas:"
+                            android:textColor="@android:color/primary_text_light"
+                            android:textSize="20sp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textStyle="normal"
+                            />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:background="@color/colorSpecialTransparent"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textInicioInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Inicio:"
+                                android:textColor="@android:color/primary_text_light"
+                                android:textSize="17sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textStyle="normal"
+                                android:background="@android:color/transparent"
+                                style="@android:style/Widget.EditText"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/fecha_inicio_new_task"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="02/07/2019"
+                                    android:textColor="@android:color/primary_text_light"
+                                    android:textSize="17sp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textStyle="normal"
+
+
+                                    />
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textHacerInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Hacer:"
+                                android:textColor="@color/colorSpecialTransparent"
+                                android:textSize="17sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textStyle="normal"
+                                android:background="@android:color/transparent"
+                                style="@android:style/Widget.EditText"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/fecha_hacer_new_task"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="none"
+                                    android:textColor="@color/colorSpecialTransparent"
+                                    android:textSize="17sp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textStyle="normal"
+
+
+                                    />
+                                <Switch
+                                    android:id="@+id/swicth_active_hacer_new_task"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="30dp"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textDeadlineInfo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="30dp"
+                                android:layout_marginTop="5dp"
+                                android:text="Deadline:"
+                                android:textColor="@color/colorSpecialTransparent"
+                                android:textSize="17sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textStyle="normal"
+                                android:background="@android:color/transparent"
+                                style="@android:style/Widget.EditText"
+                                />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/fecha_deadline_new_task"
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="none"
+                                    android:textColor="@color/colorSpecialTransparent"
+                                    android:textSize="17sp"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:textStyle="normal"
+
+
+                                    />
+                                <Switch
+                                    android:id="@+id/swicth_active_deadline_new_task"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="30dp"
+                                   />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:background="@color/colorSpecialTransparent"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+                        <!-- Project & Tags -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="3dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginTop="1dp"
+                                android:text="Projects &amp; Tags:"
+                                android:textColor="@android:color/primary_text_light"
+                                android:textSize="20sp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:textStyle="normal" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <ImageButton
+                                    android:id="@+id/button_show_more_prj_y_tags_new_task"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent"
+                                    android:src="@drawable/ic_arrow_drop_down_black_24dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="20dp"
+                                    />
+                            </RelativeLayout>
+
+
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_alignParentLeft="true">
+
+                                <RadioButton
+                                    android:id="@+id/project_vacio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/ic_checkbox_1"
+                                    android:layout_marginLeft="20dp"
+                                    android:checked="true"/>
+
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/LISTA_PROJECTS_NEW_TASK"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                     />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_centerHorizontal="true">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <View
+                                        android:id="@+id/separador_projects_tags"
+                                        android:layout_width="1dp"
+                                        android:layout_height="match_parent"
+
+                                        android:background="@color/colorSpecialTransparent"
+
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="15dp"
+                                        android:layout_marginBottom="15dp"/>
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/LISTA_TAGS_NEW_TASK"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="30dp"
+                                        android:layout_alignParentRight="true"
+                                        />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:background="@color/colorSpecialTransparent"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+
+                        <!-- Tarea  -->
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Tarea:"
+                            android:textColor="@android:color/primary_text_light"
+                            android:textSize="20sp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textStyle="normal"
+
+
+                            />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:background="@color/colorSpecialTransparent"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+
+                            <EditText
+                                android:id="@+id/edit_text_tarea_new_task"
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginLeft="25dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="@android:color/transparent"
+
+                                android:inputType="textMultiLine"
+                                android:lines="10"
+                                android:maxLines="30"
+                                android:minLines="1"
+
+                                android:singleLine="false"
+                                android:overScrollMode="always"
+                                android:scrollbarStyle="insideInset"
+                                android:scrollbars="vertical"
+
+
+                                android:textColor="#4E4E4E"
+                                android:textColorHint="#4E4E4E"
+
+
+                                android:textSize="17sp"
+                                android:hint="Investigacion: \n que es... \ncomo se .."
+                                android:autofillHints="" />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:background="@color/colorSpecialTransparent"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Detalles: "
+                            android:textColor="@android:color/primary_text_light"
+                            android:textSize="20sp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:textStyle="normal"
+
+
+                            />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:background="@color/colorSpecialTransparent"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/LISTA_SUB_TAREAS_NEW_TASK"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:id="@+id/button_new_subtare_new_task"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:background="@android:color/transparent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_alignParentBottom="true"/>
+
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:background="@color/colorSpecialTransparent"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+                        <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Imagenes:"
+                        android:textColor="@android:color/primary_text_light"
+                        android:textSize="20sp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:textStyle="normal"
+
+
+                        />
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+
+                            android:background="@color/colorSpecialTransparent"
+
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"/>
+
+
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/LISTA_IMAGENES_NEW_TASK"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="96dp">
+
+
+                            <ImageButton
+                                android:id="@+id/button_new_imagen_new_task"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_add_circle_outline_black_24dp"
+                                android:background="@android:color/transparent"
+                                android:layout_centerHorizontal="true"
+                                android:layout_alignParentBottom="true"/>
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </android.support.v4.widget.NestedScrollView>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab_new_task"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_done_white_24dp"
+                    android:focusable="true"
+
+                    android:layout_marginBottom="16dp"/>
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

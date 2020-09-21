@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fullCalendarPro_toolbar">
+
+        <TextView
+            android:id="@+id/fullCalendarPro_mesYaño"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="SEPTIEMBRE 2019"
+            android:textColor="@color/colorAzul"
+            android:textSize="19sp"
+            android:fontFamily="sans-serif-condensed-medium"
+
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageButton
+            android:id="@+id/fullCalendarPro_siguiente_mes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:background="@android:color/transparent"
+
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="70dp"
+            />
+
+        <ImageButton
+            android:id="@+id/fullCalendarPro_mes_anterior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:background="@android:color/transparent"
+
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="70dp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fullCalendarPro_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+       >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="D"
+
+            android:textColor="@color/cardview_light_background"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed-medium"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="L"
+
+            android:textColor="@color/cardview_light_background"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed-medium"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="M"
+
+            android:textColor="@color/cardview_light_background"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed-medium"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="M"
+
+            android:textColor="@color/cardview_light_background"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed-medium"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="J"
+
+            android:textColor="@color/cardview_light_background"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed-medium"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="V"
+
+            android:textColor="@color/cardview_light_background"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed-medium"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="S"
+
+            android:textColor="@color/cardview_light_background"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif-condensed-medium"
+
+            />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/fullCalendarPro_grid"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:numColumns="7"
+        />
+
+</LinearLayout>

@@ -1,0 +1,4 @@
+#Sat Aug 10 22:37:57 CDT 2019
+base.0=C\:\\Angel\\TASK_2_v2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
+path.0=classes.dex
+renamed.0=classes.dex
